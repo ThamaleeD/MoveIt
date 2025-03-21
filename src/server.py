@@ -13,6 +13,10 @@ mp_pose = mp.solutions.pose
 def home():
     return "Flask is running!"
 
+@app.route('/api/test')
+def test_api():
+    return jsonify({"message": "API working", "status": "success"})
+
 @app.route("/detect_pose", methods=["POST"])
 def detect_pose():
     data = request.get_json()
@@ -62,4 +66,4 @@ def calculate_angle(a, b, c):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port, debug=True)
