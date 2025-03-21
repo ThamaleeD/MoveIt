@@ -27,3 +27,7 @@ __pycache__/
 *.pyc
 .DS_Store
 
+# Ignore backend
+server.py
+requirements.txt
+
