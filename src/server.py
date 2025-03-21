@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import numpy as np
 import mediapipe as mp
+import os  # Add at the top of your server.py
 
 app = Flask(__name__)
 CORS(app)
@@ -61,3 +62,4 @@ def calculate_angle(a, b, c):
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=port)
