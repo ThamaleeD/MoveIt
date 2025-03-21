@@ -31,3 +31,5 @@ __pycache__/
 server.py
 requirements.txt
 
+
+.vercel
